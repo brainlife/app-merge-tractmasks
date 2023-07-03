@@ -19,3 +19,5 @@ if [ ! -f $outdir/mask.nii.gz ]; then
     exit 1
 fi
 
+[ ! -f ${outdir}/label.json ] && cp ${masks}/color.json ${outdir}/label.json
+
