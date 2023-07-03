@@ -4,7 +4,7 @@
 #PBS -N app-merge-tractmasks
 #PBS -V
 
-time singularity exec -e docker://brainlife/fsl:6.0.1 ./merge-mask.sh
+time singularity exec -e docker://brainlife/fsl:6.0.4-patched2 ./merge-mask.sh
 
 echo "complete"
 exit 0
