@@ -8,9 +8,9 @@ outdir="masks"
 for i in ${names[*]}
 do
     if [[ $i == ${names[0]} ]]; then
-        cp ${masks}/${i}*.nii.gz $outdir/mask.nii.gz
+        cp ${masks}/${i}*.nii.gz $outdir/masks/mask.nii.gz
     else
-        fslmerge -t $outdir/mask.nii.gz $outdir/masks/mask.nii.gz ${masks}/$i*.nii.gz
+        fslmerge -t $outdir/masks/mask.nii.gz $outdir/masks/mask.nii.gz ${masks}/$i*.nii.gz
     fi
 done
 
